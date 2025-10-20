@@ -1,0 +1,23 @@
+.card {
+  background-color: var(--cor-neutral-100);
+  border: 1px solid var(--cor-neutral-300);
+  border-radius: 8px;
+  padding: var(--space-24);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  margin-bottom: var(--space-16);
+  font-size: var(--font-size-lg);
+  color: var(--cor-primary);
+}
+
+.card p {
+  font-size: var(--font-size-sm);
+  color: var(--cor-neutral-500);
+}

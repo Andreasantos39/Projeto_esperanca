@@ -1,0 +1,86 @@
+/* Mobile: até 599px */
+@media (max-width: 599px) {
+  nav ul {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  main section {
+    grid-column: span 1 !important;
+  }
+}
+
+/* Tablet pequeno: 600px a 767px */
+@media (min-width: 600px) and (max-width: 767px) {
+  main {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  main section {
+    grid-column: span 6;
+  }
+}
+
+/* Tablet grande: 768px a 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  main {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  main section:nth-of-type(1) {
+    grid-column: span 5;
+  }
+
+  main section:nth-of-type(2) {
+    grid-column: span 3;
+  }
+
+  main section:nth-of-type(3),
+  main section:nth-of-type(4) {
+    grid-column: span 8;
+  }
+}
+
+/* Desktop pequeno: 992px a 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  main {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  main section:nth-of-type(1) {
+    grid-column: span 8;
+  }
+
+  main section:nth-of-type(2) {
+    grid-column: span 4;
+  }
+
+  main section:nth-of-type(3),
+  main section:nth-of-type(4) {
+    grid-column: span 12;
+  }
+}
+
+/* Desktop grande: acima de 1200px */
+@media (min-width: 1200px) {
+  main {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  main section:nth-of-type(1) {
+    grid-column: span 8;
+  }
+
+  main section:nth-of-type(2) {
+    grid-column: span 4;
+  }
+
+  main section:nth-of-type(3),
+  main section:nth-of-type(4) {
+    grid-column: span 12;
+  }
+}

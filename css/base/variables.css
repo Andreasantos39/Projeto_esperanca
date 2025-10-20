@@ -1,0 +1,30 @@
+/* Variáveis CSS - Design System */
+:root {
+  /* Paleta de cores */
+  --cor-primary: #1E90FF;
+  --cor-secondary: #FF6347;
+  --cor-neutral-100: #FFFFFF;
+  --cor-neutral-200: #F4F4F4;
+  --cor-neutral-300: #CCCCCC;
+  --cor-neutral-400: #666666;
+  --cor-neutral-500: #333333;
+  --cor-accent: #FFD700;
+
+  /* Tipografia (font sizes) */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+
+  /* Espaçamentos modulares */
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+
+  /* Fonte padrão */
+  --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

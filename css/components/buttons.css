@@ -1,0 +1,29 @@
+button,
+.btn {
+  background-color: var(--cor-primary);
+  color: var(--cor-neutral-100);
+  border: none;
+  padding: var(--space-16) var(--space-24);
+  font-size: var(--font-size-md);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--cor-secondary);
+}
+
+button:focus,
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 3px var(--cor-primary);
+}
+
+button:disabled,
+.btn:disabled {
+  background-color: var(--cor-neutral-300);
+  color: var(--cor-neutral-500);
+  cursor: not-allowed;
+}

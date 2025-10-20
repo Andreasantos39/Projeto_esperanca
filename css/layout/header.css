@@ -1,0 +1,13 @@
+header {
+  background-color: var(--cor-neutral-200);
+  padding: var(--space-16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  color: var(--cor-primary);
+  font-size: var(--font-size-xl);
+}

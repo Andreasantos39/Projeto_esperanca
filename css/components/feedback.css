@@ -1,0 +1,43 @@
+/* Alertas */
+.alert {
+  padding: var(--space-16);
+  border-radius: 4px;
+  margin-bottom: var(--space-16);
+  font-weight: bold;
+}
+
+.alert.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: var(--space-8) var(--space-16);
+  border-radius: 12px;
+  font-size: var(--font-size-xs);
+  background-color: var(--cor-accent);
+  color: var(--cor-neutral-500);
+  font-weight: bold;
+}
+
+/* Toast (exemplo simples) */
+.toast {
+  position: fixed;
+  bottom: var(--space-24);
+  right: var(--space-24);
+  background-color: var(--cor-secondary);
+  color: var(--cor-neutral-100);
+  padding: var(--space-16);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+}

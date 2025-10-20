@@ -1,0 +1,106 @@
+nav {
+  width: 100%;
+  margin-top: var(--space-16);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-24);
+  padding-left: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: var(--cor-neutral-500);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  padding: var(--space-8) var(--space-16);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: var(--cor-primary);
+  color: var(--cor-neutral-100);
+}
+
+/* Submenu */
+nav ul li ul.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--cor-neutral-100);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+nav ul li:hover .submenu {
+  display: flex;
+}
+
+nav ul li ul.submenu li a {
+  padding: var(--space-8) var(--space-16);
+  display: block;
+}
+
+/* Botão hambúrguer (☰) */
+#menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--cor-neutral-500);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Menu mobile - escondido por padrão */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: var(--space-12);
+  }
+
+  /* Submenu no mobile - abrir ao clicar (você pode implementar JS para isso se quiser) */
+  nav ul li ul.submenu {
+    position: static;
+    box-shadow: none;
+    min-width: auto;
+  }
+
+  nav ul li:hover .submenu {
+    display: none; /* Evitar hover no mobile */
+  }
+}

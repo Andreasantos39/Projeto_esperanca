@@ -1,0 +1,164 @@
+/* Base */
+@import url('./base/reset.css');
+@import url('./base/variables.css');
+@import url('./base/typography.css');
+
+/* Layout */
+@import url('./layout/grid.css');
+@import url('./layout/header.css');
+@import url('./layout/footer.css');
+@import url('./layout/navigation.css');
+
+/* Components */
+@import url('./components/buttons.css');
+@import url('./components/cards.css');
+@import url('./components/forms.css');
+@import url('./components/feedback.css');
+@import url('./components/images.css');
+
+/* Utils */
+@import url('./utils/media-queries.css');
+
+:root {
+  /* Paleta de cores exemplo */
+  --cor-primary: #005f73;
+  --cor-secondary: #0a9396;
+  --cor-accent: #94d2bd;
+  --cor-neutral-100: #f0f0f0;
+  --cor-neutral-300: #cccccc;
+  --cor-neutral-500: #555555;
+  --cor-neutral-700: #222222;
+  --cor-danger: #ee6c4d;
+
+  /* Tipografia */
+  --font-size-xs: 0.75rem;  /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1rem;     /* 16px */
+  --font-size-lg: 1.25rem;  /* 20px */
+  --font-size-xl: 1.5rem;   /* 24px */
+
+  /* Espaçamentos */
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+}
+
+/* Navegação */
+
+nav {
+  width: 100%;
+  margin-top: var(--space-16);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-24);
+  padding-left: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: var(--cor-neutral-500);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  padding: var(--space-8) var(--space-16);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: var(--cor-primary);
+  color: var(--cor-neutral-100);
+}
+
+/* Submenu */
+nav ul li ul.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--cor-neutral-100);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+nav ul li:hover > ul.submenu {
+  display: flex;
+}
+
+nav ul li ul.submenu li a {
+  padding: var(--space-8) var(--space-16);
+  display: block;
+}
+
+/* Submenu ativo no mobile */
+nav ul li ul.submenu.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Botão hambúrguer (☰) */
+#menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--cor-neutral-500);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Menu mobile - escondido por padrão */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: var(--space-12);
+  }
+
+  /* Submenu no mobile - posição estática */
+  nav ul li ul.submenu {
+    position: static;
+    box-shadow: none;
+    min-width: auto;
+  }
+
+  /* Evitar abrir submenu no hover no mobile */
+  nav ul li:hover > ul.submenu {
+    display: none;
+  }
+}
+
